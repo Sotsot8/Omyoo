@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omyoo | Skincare Herbal Alami</title>
+    <style>
+      /* ----------- Base reset ----------- */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      /* ----------- Global layout ----------- */
+      body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        color: #374151;
+        /* 🍃 NEW: soft leaf‑tone gradient background with subtle pattern overlay */
+        background: linear-gradient(135deg, #f1f8f4 0%, #e3f2e8 40%, #d6ecdd 100%);
+        background-attachment: fixed; /* keeps gradient steady on scroll */
+        position: relative;
+        isolation: isolate; /* ensure pseudo‑element is behind content */
+      }
+      /* subtle leaf veins pattern */
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url('https://www.transparenttextures.com/patterns/paper-2.png');
+        opacity: 0.25; /* very light texture */
+        mix-blend-mode: multiply;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      header {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid #e5e7eb;
+        padding: 1rem 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      header img {
+        height: 60px;
+        width: auto;
+      }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 1rem;
+      }
+      nav a {
+        color: #374151;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.2s;
+      }
+      nav a:hover {
+        color: #4f46e5;
+      }
+
+      main {
+        flex: 1;
+        padding: 2rem 1.5rem;
+        display: grid;
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      section {
+        background: rgba(255, 255, 255, 0.9);
+        backdrop-filter: blur(3px);
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      h2 {
+        margin-bottom: 1rem;
+        color: #111827;
+      }
+
+      /* ----------- Product highlight ----------- */
+      .product-highlight {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+      }
+      .product-highlight img {
+        width: 300px;
+        max-width: 90%;
+        border-radius: 0.75rem;
+        object-fit: cover;
+        border: 4px solid #e5e7eb;
+      }
+      .product-highlight .cta {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.8rem 1.5rem;
+        background: #4f46e5;
+        color: #fff;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: background 0.2s, transform 0.15s;
+      }
+      .product-highlight .cta:hover {
+        background: #4338ca;
+        transform: translateY(-2px);
+      }
+
+      /* ----------- Contact buttons ----------- */
+      a.button-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1rem;
+        border-radius: 0.5rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: transform 0.15s ease, background 0.15s ease;
+        background: transparent;
+        border: 2px solid currentColor;
+      }
+      a.button-link:hover {
+        transform: translateY(-2px);
+        background: rgba(0, 0, 0, 0.05);
+      }
+      a.button-link.instagram {
+        color: #E4405F;
+      }
+      a.button-link.whatsapp {
+        color: #128C7E;
+      }
+
+      footer {
+        background: #111827;
+        color: #e5e7eb;
+        text-align: center;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="D:\Biarsaja's File\PROYEK LUR\OMYOO\Website Omyoo\logo.jpg.jpg" alt="Omyoo" />
+      <nav>
+        <ul>
+          <li><a href="#beranda">Beranda</a></li>
+          <li><a href="#produk">Produk</a></li>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="beranda">
+        <h2>Selamat Datang di Omyoo</h2>
+        <p>
+          Omyoo menghadirkan rangkaian <strong>skincare herbal</strong> yang diracik
+          dari bahan-bahan <em>100% alami</em>. Rawat kulitmu secara lembut dan
+          aman tanpa bahan kimia keras.
+        </p>
+      </section>
+
+      <section id="produk">
+        <h2>Produk Unggulan</h2>
+        <div class="product-highlight">
+          <img src="https://placehold.co/600x400" alt="Herbal Body Scrub" />
+          <h3>Herbal Body Scrub</h3>
+          <p>
+            Eksfoliasi lembut kulitmu dengan butiran alami dan rempah pilihan
+            yang efektif membantu menyehatkan dan mencerahkan kulit secara alami, mengangkat sel kulit mati, merangsang
+            regenerasi kulit, menyamarkan flek hitam, dan melembabkan kulit.
+          </p>
+          <a href="https://wa.me/6281234567890" class="cta" target="_blank">Pesan Sekarang</a>
+        </div>
+      </section>
+
+      <section id="tentang">
+        <h2>Mengapa Memilih Omyoo?</h2>
+        <ul>
+          <li>🌿 Bahan herbal berkualitas tinggi</li>
+          <li>🚫 Tanpa pengawet & bahan kimia</li>
+          <li>✅ Produksi Manual Konvensional</li>
+          <li>♻️ Kemasan ramah lingkungan</li>
+        </ul>
+      </section>
+
+      <section id="kontak">
+        <h2>Hubungi Kami</h2>
+        <p>
+          Untuk pertanyaan atau pemesanan cepat, hubungi kami melalui kanal di
+          bawah ini:
+        </p>
+        <div style="margin-top:1rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a
+            href="https://instagram.com/omyoo.id"
+            target="_blank"
+            class="button-link instagram"
+            >Instagram</a
+          >
+          <a
+            href="https://wa.me/6281234567890"
+            target="_blank"
+            class="button-link whatsapp"
+            >WhatsApp</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © 2025 Omyoo. All rights reserved.
+    </footer>
+  </body>
+</html>
